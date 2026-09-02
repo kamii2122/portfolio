@@ -5,17 +5,17 @@ export const personal = {
   heroStatement:
     "Building practical software solutions and developing skills in software engineering, web development, and data-related technologies.",
   tagline: "Computer Science Student & Aspiring Software Developer",
-  email: "", // [EDIT] Add your email address
+  email: "cynthiakamii59@gmail.com",
   location: "Kenya",
   profileImage: "/images/kami.png",
-  // [EDIT] Replace with your actual social profile URLs
   social: {
     github: "https://github.com/kamii2122",
-    linkedin: "",
+    linkedin: "", // [EDIT] Add your LinkedIn URL
     twitter: "",
-    email: "",
+    email: "cynthiakamii59@gmail.com",
+    whatsapp: "254794554119", // International digits, no "+" or spaces
   },
-  formspreeEndpoint: "https://formspree.io/f/YOUR_FORM_ID", // [EDIT] Replace with your Formspree form ID
+  formspreeEndpoint: "https://formspree.io/f/xvkoaqvv",
 };
 
 export const navLinks = [

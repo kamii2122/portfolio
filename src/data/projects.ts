@@ -26,12 +26,13 @@ export const projects: Project[] = [
       "Shopping cart management",
       "Checkout / purchase flow",
     ],
-    image: "/portfolio/images/projects/ecommerce.png",
+    image:
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80",
     imageAlt:
-      "Screenshot placeholder for the E-Commerce Website project interface",
+      "Person holding shopping bags, an illustration of the online shopping experience built with the E-Commerce Website project",
     githubUrl: "", // [EDIT] Add GitHub repository URL
     liveUrl: "", // [EDIT] Add live demo URL
-    accent: "from-violet-500 to-violet-700",
+    accent: "from-violet-600 to-violet-800",
   },
   {
     id: "hotel-management-system",
@@ -48,12 +49,13 @@ export const projects: Project[] = [
       "Records management",
       "Administrative functionality",
     ],
-    image: "/portfolio/images/projects/hotel.png",
+    image:
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80",
     imageAlt:
-      "Screenshot placeholder for the Hotel Management System project interface",
+      "Luxury hotel resort with a pool, echoing the hospitality operations handled by the Hotel Management System project",
     githubUrl: "", // [EDIT] Add GitHub repository URL
     liveUrl: "", // [EDIT] Add live demo URL
-    accent: "from-navy-900 to-navy-800",
+    accent: "from-navy-800 to-navy-950",
   },
   {
     id: "library-management-system",
@@ -70,11 +72,12 @@ export const projects: Project[] = [
       "Record management",
       "Administrative features",
     ],
-    image: "/portfolio/images/projects/library.png",
+    image:
+      "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=900&q=80",
     imageAlt:
-      "Screenshot placeholder for the Library Management System project interface",
+      "Rows of books on library shelves, representing the book and record management in the Library Management System project",
     githubUrl: "", // [EDIT] Add GitHub repository URL
     liveUrl: "", // [EDIT] Add live demo URL
-    accent: "from-navy-800 to-slate-600",
+    accent: "from-slate-600 to-navy-900",
   },
 ];

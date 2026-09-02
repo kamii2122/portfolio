@@ -24,31 +24,21 @@ export default function Projects() {
               key={project.id}
               className="reveal group flex flex-col overflow-hidden transition-transform duration-300 hover:-translate-y-1.5 hover:shadow-xl"
             >
-              <div
-                className={`relative flex aspect-[16/10] items-center justify-center overflow-hidden bg-gradient-to-br ${project.accent} transition-transform duration-500 group-hover:scale-[1.03]`}
-              >
+              <div className="relative aspect-[16/10] overflow-hidden bg-gradient-to-br ${project.accent}">
+                <img
+                  src={project.image}
+                  alt={project.imageAlt}
+                  loading="lazy"
+                  width={900}
+                  height={563}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+                />
                 <div
-                  className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(255,255,255,0.12),transparent_65%)]"
+                  className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"
                   aria-hidden="true"
                 />
-                <div className="relative flex h-3/4 w-3/4 flex-col overflow-hidden rounded-lg border border-white/15 bg-white/5 backdrop-blur-sm">
-                  <div className="flex items-center gap-1.5 px-3 py-2">
-                    <span className="h-2 w-2 rounded-full bg-white/30" />
-                    <span className="h-2 w-2 rounded-full bg-white/30" />
-                    <span className="h-2 w-2 rounded-full bg-white/30" />
-                  </div>
-                  <div className="flex-1 px-3 pb-3">
-                    <div className="h-1.5 w-3/4 rounded bg-white/20" />
-                    <div className="mt-2 h-1.5 w-1/2 rounded bg-white/10" />
-                    <div className="mt-3 space-y-1.5">
-                      <div className="h-1.5 w-full rounded bg-white/10" />
-                      <div className="h-1.5 w-full rounded bg-white/10" />
-                      <div className="h-1.5 w-2/3 rounded bg-white/10" />
-                    </div>
-                  </div>
-                </div>
-                <span className="absolute bottom-3 right-3 rounded bg-black/30 px-2 py-1 text-[10px] font-medium text-white/80">
-                  Screenshot placeholder
+                <span className="absolute bottom-3 right-3 rounded-full bg-navy-950/70 px-3 py-1 text-xs font-medium text-white/90 backdrop-blur-sm">
+                  {project.subtitle}
                 </span>
               </div>
 

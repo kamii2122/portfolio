@@ -9,6 +9,7 @@ import {
   LinkedinIcon,
   TwitterIcon,
   MailIcon,
+  WhatsAppIcon,
   CheckIcon,
   ErrorIcon,
 } from "@/components/ui/Icons";
@@ -88,7 +89,10 @@ export default function Contact() {
     try {
       const response = await fetch(personal.formspreeEndpoint, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify(formData),
       });
       if (response.ok) {
@@ -120,6 +124,14 @@ export default function Contact() {
       href: personal.social.twitter,
       icon: TwitterIcon,
       available: Boolean(personal.social.twitter),
+    },
+    {
+      label: "WhatsApp",
+      href: personal.social.whatsapp
+        ? `https://wa.me/${personal.social.whatsapp}`
+        : "",
+      icon: WhatsAppIcon,
+      available: Boolean(personal.social.whatsapp),
     },
   ];
 

@@ -62,18 +62,18 @@ export default function Navigation() {
           <a
             href="#home"
             onClick={scrollToTop}
-            className="text-lg font-bold tracking-tight text-navy-950 transition hover:text-violet-700"
+            className="text-base font-bold tracking-tight text-navy-950 transition hover:text-violet-700 sm:text-lg"
           >
             {personal.name}
           </a>
 
-          <ul className="hidden items-center gap-1 lg:flex">
+          <ul className="hidden items-center gap-0.5 xl:flex">
             {navLinks.map((link) => (
               <li key={link.id}>
                 <a
                   href={`#${link.id}`}
                   onClick={(e) => handleNavClick(e, `#${link.id}`)}
-                  className={`rounded-md px-3 py-2 text-sm font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600 ${
+                  className={`rounded-md px-2.5 py-2 text-sm font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600 lg:px-3 ${
                     active === link.id
                       ? "text-violet-700"
                       : "text-slate-600 hover:text-navy-950"
@@ -89,7 +89,7 @@ export default function Navigation() {
           <button
             type="button"
             onClick={() => setMenuOpen((prev) => !prev)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-navy-950 transition hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600 lg:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-navy-950 transition hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600 xl:hidden"
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
@@ -105,7 +105,7 @@ export default function Navigation() {
         {menuOpen && (
           <div
             id="mobile-menu"
-            className="border-t border-border bg-white px-6 pb-6 pt-2 lg:hidden"
+            className="border-t border-border bg-white px-6 pb-6 pt-2 xl:hidden"
           >
             <ul className="space-y-1">
               {navLinks.map((link, index) => (
