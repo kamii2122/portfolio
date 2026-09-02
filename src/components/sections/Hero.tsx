@@ -47,30 +47,37 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="reveal reveal-delay-2 relative hidden flex-shrink-0 justify-center sm:flex lg:w-96">
-          <div
-            className="relative h-72 w-72 overflow-hidden rounded-2xl border border-violet-500/20 bg-gradient-to-br from-violet-500/10 to-transparent lg:h-80 lg:w-80"
-            role="img"
-            aria-label="Abstract developer-themed placeholder visual"
-          >
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div
-                className="h-full w-full bg-[radial-gradient(circle_at_50%_35%,rgba(124,58,237,0.25),transparent_60%)]"
-                aria-hidden="true"
-              />
-              <div
-                className="absolute h-40 w-40 rounded-xl border border-violet-400/30 bg-violet-500/10 backdrop-blur-sm"
-                aria-hidden="true"
-              />
-              <div
-                className="absolute h-24 w-24 translate-x-16 translate-y-16 rounded-lg bg-violet-600/20"
-                aria-hidden="true"
-              />
-              <div className="absolute bottom-8 left-8 font-mono text-xs leading-6 text-violet-300/70" aria-hidden="true">
-                {"const { build } = "}
-                <br />
-                {"'curiosity & code';"}
-              </div>
+        <div className="reveal reveal-delay-2 relative flex flex-shrink-0 justify-center sm:flex lg:w-96">
+          <div className="relative" aria-label={`Photo of ${personal.name}`}>
+            <div
+              className="absolute -inset-4 rounded-[2rem] border border-violet-400/20"
+              aria-hidden="true"
+            />
+            <div
+              className="absolute -right-3 -top-3 h-16 w-16 rounded-lg bg-violet-500/20 blur-sm"
+              aria-hidden="true"
+            />
+            <div
+              className="absolute -bottom-3 -left-3 h-20 w-20 rounded-xl bg-violet-600/15 blur-sm"
+              aria-hidden="true"
+            />
+            <img
+              src={personal.profileImage}
+              alt={`Photo of ${personal.name}`}
+              width={320}
+              height={400}
+              className="relative h-72 w-64 rounded-[1.75rem] border border-white/10 object-cover object-top sm:h-80 sm:w-72 lg:h-96 lg:w-80"
+            />
+            <div
+              className="absolute inset-x-0 bottom-0 h-24 rounded-b-[1.75rem] bg-gradient-to-t from-navy-950/80 to-transparent"
+              aria-hidden="true"
+            />
+            <div className="absolute inset-x-4 bottom-4">
+              <p className="text-sm font-semibold text-white">{personal.name}</p>
+              <p className="text-xs text-slate-300">
+                {personal.location} ·{" "}
+                {"Software/Technology Attaché"}
+              </p>
             </div>
           </div>
         </div>
