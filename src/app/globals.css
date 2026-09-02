@@ -48,6 +48,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Prevent horizontal scroll from decorative/aesthetic elements
+   without breaking position: sticky (overflow: clip does not create
+   a scroll container the way overflow: hidden does). */
+html,
+body {
+  overflow-x: clip;
+}
+
 h1,
 h2,
 h3,

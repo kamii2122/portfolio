@@ -15,7 +15,7 @@ export default function Hero() {
         <div className="absolute right-40 top-40 hidden h-40 w-40 border border-violet-500/20 lg:block" />
       </div>
 
-      <div className="relative mx-auto flex min-h-[calc(100vh-5rem)] w-full max-w-7xl flex-col items-start justify-center gap-12 px-6 py-20 sm:px-10 lg:flex-row lg:items-center lg:gap-16 lg:px-12">
+      <div className="relative mx-auto flex min-h-[calc(100vh-5rem)] w-full max-w-7xl flex-col items-start justify-center gap-10 px-6 py-20 sm:px-10 md:flex-row md:items-center md:gap-12 lg:gap-16 lg:px-12">
         <div className="flex-1">
           <p className="reveal mb-6 flex items-center gap-3 text-sm font-medium tracking-wide text-slate-400">
             <span
@@ -47,18 +47,18 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="reveal reveal-delay-2 relative flex flex-shrink-0 justify-center sm:flex lg:w-96">
+        <div className="reveal reveal-delay-2 relative flex w-full justify-center md:w-auto md:flex-none lg:w-96">
           <div className="relative" aria-label={`Photo of ${personal.name}`}>
             <div
-              className="absolute -inset-4 rounded-[2rem] border border-violet-400/20"
+              className="absolute -inset-3 rounded-[2rem] border border-violet-400/20 sm:-inset-4"
               aria-hidden="true"
             />
             <div
-              className="absolute -right-3 -top-3 h-16 w-16 rounded-lg bg-violet-500/20 blur-sm"
+              className="absolute -right-3 -top-3 h-14 w-14 rounded-lg bg-violet-500/20 blur-sm sm:h-16 sm:w-16"
               aria-hidden="true"
             />
             <div
-              className="absolute -bottom-3 -left-3 h-20 w-20 rounded-xl bg-violet-600/15 blur-sm"
+              className="absolute -bottom-3 -left-3 h-16 w-16 rounded-xl bg-violet-600/15 blur-sm sm:h-20 sm:w-20"
               aria-hidden="true"
             />
             <img
