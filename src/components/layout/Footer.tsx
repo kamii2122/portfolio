@@ -4,6 +4,7 @@ import {
   LinkedinIcon,
   TwitterIcon,
   MailIcon,
+  WhatsAppIcon,
 } from "@/components/ui/Icons";
 
 export default function Footer() {
@@ -12,6 +13,13 @@ export default function Footer() {
     { label: "LinkedIn", href: personal.social.linkedin, icon: LinkedinIcon },
     { label: "Twitter", href: personal.social.twitter, icon: TwitterIcon },
     { label: "Email", href: `mailto:${personal.social.email}`, icon: MailIcon },
+    {
+      label: "WhatsApp",
+      href: personal.social.whatsapp
+        ? `https://wa.me/${personal.social.whatsapp}`
+        : "",
+      icon: WhatsAppIcon,
+    },
   ].filter((s) => Boolean(s.href));
 
   return (
