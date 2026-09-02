@@ -50,7 +50,7 @@ export default function Navigation() {
 
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-          scrolled
+          scrolled || menuOpen
             ? "border-b border-border bg-white/90 shadow-sm backdrop-blur-md"
             : "border-b border-transparent bg-white/0"
         }`}
@@ -62,7 +62,11 @@ export default function Navigation() {
           <a
             href="#home"
             onClick={scrollToTop}
-            className="text-base font-bold tracking-tight text-navy-950 transition hover:text-violet-700 sm:text-lg"
+            className={`text-base font-bold tracking-tight transition sm:text-lg ${
+              scrolled || menuOpen
+                ? "text-navy-950 hover:text-violet-700"
+                : "text-white hover:text-violet-300"
+            }`}
           >
             {personal.name}
           </a>
@@ -74,9 +78,13 @@ export default function Navigation() {
                   href={`#${link.id}`}
                   onClick={(e) => handleNavClick(e, `#${link.id}`)}
                   className={`rounded-md px-2.5 py-2 text-sm font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600 lg:px-3 ${
-                    active === link.id
-                      ? "text-violet-700"
-                      : "text-slate-600 hover:text-navy-950"
+                    scrolled || menuOpen
+                      ? active === link.id
+                        ? "text-violet-700"
+                        : "text-slate-600 hover:text-navy-950"
+                      : active === link.id
+                        ? "text-violet-300"
+                        : "text-slate-300 hover:text-white"
                   }`}
                   aria-current={active === link.id ? "true" : undefined}
                 >
@@ -89,7 +97,11 @@ export default function Navigation() {
           <button
             type="button"
             onClick={() => setMenuOpen((prev) => !prev)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-navy-950 transition hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600 xl:hidden"
+            className={`inline-flex h-10 w-10 items-center justify-center rounded-lg transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600 xl:hidden ${
+              scrolled || menuOpen
+                ? "text-navy-950 hover:bg-slate-100"
+                : "text-white hover:bg-white/10"
+            }`}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
