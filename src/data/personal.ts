@@ -15,7 +15,7 @@ export const personal = {
     twitter: "",
     email: "",
   },
-  formspreeEndpoint: "https://formspree.io/f/YOUR_FORM_ID", // [EDIT] Replace with your Formspree form ID
+  formspreeEndpoint: "https://formspree.io/f/xvkoaqvv",
 };
 
 export const navLinks = [
